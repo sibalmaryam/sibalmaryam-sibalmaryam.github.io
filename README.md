@@ -1,2 +1,2 @@
-# sibalmaryam-sibalmaryam.github.io
+# sibalmaryam.github.io
 https://www.sibalmaryam.github.io
