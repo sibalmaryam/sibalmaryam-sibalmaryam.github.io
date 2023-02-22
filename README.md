@@ -1,2 +1,2 @@
 # sibalmaryam.github.io
-https://www.sibalmaryam.github.io
+https://sibalmaryam.github.io
