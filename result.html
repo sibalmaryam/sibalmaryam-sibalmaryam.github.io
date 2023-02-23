@@ -10,6 +10,28 @@
 <body>
 <script async src="https://cse.google.com/cse.js?cx=06f589e409ee1403a">
 </script>
-<div class="gcse-searchresults-only"></div>
+<script>
+  window.__gcse = {
+    parsetags: 'explicit',
+    callback: myCallback
+  };
+  function myCallback() {
+    if (document.readyState == 'complete') {
+      google.search.cse.element.render(
+        {
+          div: 'google-search-results',
+        });
+    } else {
+      google.setOnLoadCallback(function() {
+        google.search.cse.element.render(
+          {
+            div: 'google-search-results',
+          });
+      }, true);
+    }
+  }
+</script>
+<script src="https://cse.google.com/cse.js?cx=YOUR_SEARCH_ENGINE_ID"></script>
+<div id="google-search-results"></div>
 </body>
 </html>
