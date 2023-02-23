@@ -13,25 +13,27 @@
 <script>
   window.__gcse = {
     parsetags: 'explicit',
-    callback: myCallback
-  };
-  function myCallback() {
-    if (document.readyState == 'complete') {
-      google.search.cse.element.render(
-        {
-          div: 'google-search-results',
-        });
-    } else {
-      google.setOnLoadCallback(function() {
+    callback: function() {
+      if (document.readyState == 'complete') {
         google.search.cse.element.render(
           {
-            div: 'google-search-results',
-          });
-      }, true);
+            div: "google-search-results",
+            tag: 'searchresults-only',
+          }
+        );
+      }
     }
-  }
+  };
+  (function() {
+    var cx = '06f589e409ee1403a';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
 </script>
-<script src="https://cse.google.com/cse.js?cx=Y06f589e409ee1403a"></script>
-<div id="google-search-results"></div>
+<gcse:searchresults-only></gcse:searchresults-only>
 </body>
 </html>
